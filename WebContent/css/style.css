@@ -1,0 +1,53 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-size: "微软雅黑";
+	font-size: 20px;
+}
+
+#login_table {
+	width: 400px;
+	margin: 0 auto;
+}
+
+#login_title {
+	font-size: 32px;
+	font-family: "华文新魏";
+	padding-left: 120px;
+}
+
+#submit {
+	margin-left: 120px;
+	width: 50px;
+}
+
+#login_div {
+	margin-top: 240px;
+}
+
+#login_table tr {
+	line-height: 40px;
+}
+
+#password, #username {
+	height: 28px;
+}
+
+.isdi {
+	list-style: none;
+	background: url("di.png") 10px 10px no-repeat;
+	padding-left: 40px;
+	background-position: top left;
+}
+
+.notdi {
+	list-style: none;
+	background: url("file.png") 10px 10px no-repeat;
+	background-position: top left;
+	padding-left: 40px;
+}
+
+#result li {
+	font-size: 30px;
+	line-height: 25px;
+}
