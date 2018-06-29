@@ -35,14 +35,14 @@
 
 .isdi {
 	list-style: none;
-	background: url("di.png") 10px 10px no-repeat;
+	background: url("../image/di.png") 10px 10px no-repeat;
 	padding-left: 40px;
 	background-position: top left;
 }
 
 .notdi {
 	list-style: none;
-	background: url("file.png") 10px 10px no-repeat;
+	background: url("../image/file.png") 10px 10px no-repeat;
 	background-position: top left;
 	padding-left: 40px;
 }

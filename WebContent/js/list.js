@@ -17,13 +17,10 @@ function submit(){
                             else
                                 result.innerHTML=result.innerHTML+"<li class='notdi'>"+blank+"<a href='#'>"+data.files[j].fileName+"</a></li>";
                 		console.log(j);
-                	}
-                	
-                	
+                	}                	            	
 			} else {
 				alert("发生错误：" + request.status);
 			}
 		} 
 	}
-	
 }
