@@ -120,8 +120,7 @@ function filedownload(e){
 	var form = document.createElement("form");
 	body[0].appendChild(form);
 	form.setAttribute("action","User/FileDownload");
-	form.setAttribute("method","post");
-	
+	form.setAttribute("method","post");	
 	var input = document.createElement("input");
 	form.appendChild(input);
 	input.setAttribute("type","hidden");
