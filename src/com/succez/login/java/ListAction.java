@@ -39,35 +39,27 @@ public class ListAction extends HttpServlet {
 	}
 
 	public void findFile(String path, int level) {
-
-		System.out.println(path);
 		File file = new File(path);
 		File[] files = file.listFiles();
 		for (File f : files) {
-
 			MyFile myFile = new MyFile();
 			myFile.setFileName(f.getName());
 			myFile.setFilePath(f.getPath());
-			Long fileModified=f.lastModified();
-			Date date=new Date(fileModified);
-			SimpleDateFormat simpleDateFormat =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			String lastModify=simpleDateFormat.format(date);
+			Long fileModified = f.lastModified();
+			Date date = new Date(fileModified);
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			String lastModify = simpleDateFormat.format(date);
 			myFile.setLastModify(lastModify);
 			myFile.setLevel(level);
 			myFile.setSize(f.length());
 			if (f.isDirectory()) {
-
-				System.out.println("文件夹：" + f.getName());
 				myFile.setDirectory(true);
 				filess.add(myFile);
 				findFile(f.getPath(), level + 1);
-
 			} else {
-				System.out.println("文件：" + f.getName());
 				myFile.setDirectory(false);
 				filess.add(myFile);
 			}
 		}
 	}
-
 }

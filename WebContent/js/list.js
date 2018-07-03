@@ -37,7 +37,7 @@ window.onload = function() {
 
 						td1 = document.createElement("td");
 						tr.appendChild(td1);
-						
+
 						td2 = document.createElement("td");
 						tr.appendChild(td2);
 						td2.innerHTML = data.files[j].lastModify;
@@ -54,13 +54,13 @@ window.onload = function() {
 						li = document.createElement("li");
 						li.setAttribute("class", "notdi");
 						li.innerHTML = blank;
-						
+
 						td.appendChild(li);
 						a = document.createElement("a");
 						a.setAttribute("id", directory);
-					//	a.setAttribute("onclick", "down(this);");
+						// a.setAttribute("onclick", "down(this);");
 						a.innerHTML = data.files[j].fileName;
-						tr.setAttribute("onclick","filedownload(this);");
+						tr.setAttribute("onclick", "filedownload(this);");
 						li.appendChild(a);
 						td1 = document.createElement("td");
 						tr.appendChild(td1);
@@ -114,18 +114,18 @@ function re(ee) {
 
 }
 
-function filedownload(e){
-	var f=e.firstChild.firstChild.lastChild;
-	var body=document.getElementsByTagName("body");
+function filedownload(e) {
+	var f = e.firstChild.firstChild.lastChild;
+	var body = document.getElementsByTagName("body");
 	var form = document.createElement("form");
 	body[0].appendChild(form);
-	form.setAttribute("action","User/FileDownload");
-	form.setAttribute("method","post");	
+	form.setAttribute("action", "User/FileDownload");
+	form.setAttribute("method", "post");
 	var input = document.createElement("input");
 	form.appendChild(input);
-	input.setAttribute("type","hidden");
-	input.setAttribute("name","filePath");
-	input.setAttribute("value",f.id+"\\"+f.innerHTML);
+	input.setAttribute("type", "hidden");
+	input.setAttribute("name", "filePath");
+	input.setAttribute("value", f.id + "\\" + f.innerHTML);
 	form.submit();
 	body[0].removeChild(form);
 
