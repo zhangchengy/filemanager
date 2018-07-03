@@ -54,6 +54,7 @@ public class ListAction extends HttpServlet {
 			String lastModify=simpleDateFormat.format(date);
 			myFile.setLastModify(lastModify);
 			myFile.setLevel(level);
+			myFile.setSize(f.length());
 			if (f.isDirectory()) {
 
 				System.out.println("文件夹：" + f.getName());

@@ -1,13 +1,12 @@
 package com.succez.login.java;
 
-
-
 public class MyFile {
 	String filePath;
 	String fileName;
 	boolean isDirectory;
 	String lastModify;
 	int level;
+	long size;
 	
 	public String getLastModify() {
 		return lastModify;
@@ -39,4 +38,11 @@ public class MyFile {
 	public void setDirectory(boolean isDirectory) {
 		this.isDirectory = isDirectory;
 	}
+	public long getSize() {
+		return size;
+	}
+	public void setSize(long size) {
+		this.size = size;
+	}
+	
 }
